@@ -190,7 +190,12 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const res = await fetch("http://localhost:3000/api/contact", {
+
+    const API_URL = window.location.hostname === 'localhost'
+      ? 'http://localhost:3000/api/contact'
+      : '/.netlify/functions/contact';
+
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
