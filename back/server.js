@@ -1,13 +1,16 @@
 import express from "express"
 import { supabase } from "./supabase.js";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors());
+
 //nos permite usar el json del body
-app.use(express.json);
+app.use(express.json());
 
 //endpoint de tipo post que permite consultar a la db para insertar el data
-app.post("/api/contact", async (res, req) => {
+app.post("/api/contact", async (req, res) => {
 
     //extraemos los datos enviados desde el formulario
     const { firstName, lastName, email, queryType, message, consent } = req.body;
@@ -22,16 +25,17 @@ app.post("/api/contact", async (res, req) => {
     //insertar datos a la tabla formulario
 
     const { error } = await supabase.from("formulario").insert([{
-        firstName: firstName,
-        lastName: lastName,
+        first_name: firstName,
+        last_name: lastName,
         email: email,
-        queryType: queryType,
+        query_type: queryType,
         message: message,
         consent: consent
     }]);
 
     //si en la espera de la consulta insert de supabase falla, manda un error
     if (error) {
+        console.error("SUPABASE ERROR:", error);
         return res.status(500).json({ error: "Error al guardar los datos" });
     }
 
@@ -45,6 +49,6 @@ app.post("/api/contact", async (res, req) => {
 });
 
 app.listen(3000, () => {
-    console.log("Servidor iniciando...")
+    console.log("Servidor corriendo en http://localhost:3000");
 })
 
