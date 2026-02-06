@@ -1,4 +1,6 @@
 import { FormComponent } from './components/form';
+import { successModal } from './components/successModal.js';
+
 import { validateForm, getFormData } from './utils/validation.js';
 import { submitContactForm } from './services/api.js';
 import {
@@ -65,7 +67,7 @@ async function handleSubmit(e) {
 
 
   if (result.success) {
-    alert('Formulario enviado correctamente');
+    successModal("Formulario enviado correctamente")
     form.reset();
   } else {
     alert(result.error);
