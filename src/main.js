@@ -1,4 +1,4 @@
-import { FormComponent } from './components/form';
+import { FormComponent } from './components/Form.js';
 import { successModal } from './components/successModal.js';
 
 import { validateForm, getFormData } from './utils/validation.js';
