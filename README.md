@@ -6,10 +6,16 @@
   - [Enlaces](#enlaces)
 - [Autor](#autor)
 
+## Resumen
+
+En este desafio se desarrollo conocimientos y estructura por modularizacion de codigo, aplicando los principios del front end clasico, usando vanilla, express y postgre. Todo esto para alcanzar la competencia de evaluacion diagnostica.
+
 ### Captura de pantalla
 
-![](./)
-
+![](/public/assets/principal.png)
+![](/public/assets/error.png)
+![](/public/assets/active-state.png)
+![](/public/assets/info-contact.png)
 
 ### Enlaces
 
