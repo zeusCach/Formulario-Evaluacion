@@ -20,7 +20,7 @@ En este desafio se desarrollo conocimientos y estructura por modularizacion de c
 ### Enlaces
 
 - URL en GITHUB de tu proyecto: https://github.com/zeusCach/Formulario-Evaluacion
-- URL del site:[Agrega la URL del sitio en vivo aquí](https://formulario-evaluacion.netlify.app/)
+- URL del site:[formulario-evaluacion](https://formulario-evaluacion.netlify.app/)
 
 ## Autor
 - Zeus Emmanuel Cach Rodriguez
